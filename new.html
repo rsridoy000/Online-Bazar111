@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionFetch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--Navbar-->
+<body class="bg-gray-100 pt-16 ">
+
+<nav class="flex items-center justify-between bg-gray-800 p-4 fixed top-0 left-0 w-full z-50 ">
+  <!-- Brand --> 
+  <a href="#brand" class="flex items-center gap-2">
+    <img src="logo.jpg" alt="Logo" class="h-10 w-auto">
+    <span class="text-white text-xl font-bold">R.S.R</span>
+  </a>
+  
+  <!-- Toggle Button -->
+  <button class="text-white text-2xl md:hidden"
+          onclick="document.getElementById('menu').classList.toggle('hidden')">
+&#9776; 
+</button>
+
+  <!-- Menu -->
+  <div id="menu" class="hidden md:flex md:items-center gap-6 flex-col md:flex-row bg-gray-900 md:bg-transparent p-4 md:p-0 absolute md:static top-16 left-0 w-full md:w-auto ">
+    <a href="#home" class="text-white hover:text-green-400 active:text-orange-400 "><i class="fa-solid fa-house"></i> Home</a><br>
+    <a href="#footer" class="text-white hover:text-green-400"><i class="fa-solid fa-address-card"></i> About</a>
+    <li class="relative list-none">
+      <label class="flex items-center text-white hover:text-green-400 cursor-pointer" for="shop-toggle">
+        <i class="fa-solid fa-briefcase"></i> Shop
+        <i class="fa-solid fa-chevron-down ml-1"></i>
+      </label>
+      <input type="checkbox" id="shop-toggle" class="hidden peer">
+    
+      <ul class="absolute bg-gray-700 text-white mt-2 rounded shadow-lg hidden peer-checked:block">
+        <li><a href="#shoes" class="block px-4 py-2 hover:bg-green-500">Shoes</a></li>
+        <li><a href="#colleaction" class="block px-4 py-2 hover:bg-green-500">T-Shirts</a></li>
+        <li><a href="#watch" class="block px-4 py-2 hover:bg-green-500">Watch</a></li>
+      </ul>
+    </li>
+    
+    <a href="#footer" class="text-white hover:text-green-400"><i class="fa-solid fa-envelope"></i> Contact</a>
+
+    <!-- Search -->
+    <form class="flex">
+      <input type="text" placeholder="Search..." class="px-2 py-1 rounded-l bg-white text-black">
+      <button type="submit" class="bg-green-500 text-white px-3 rounded-r">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+  </div>
+</nav>
+<body class="bg-gray-100">
+
+  <section class="container mx-auto my-10 px-4">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+      
+      <!-- Left: Product Images -->
+      <div class="flex flex-col items-center">
+        <!-- Main Image -->
+        <img id="main-img" 
+             src="t shirt/s1_solid-colour-t-shirt-for-men.webp" 
+             alt="Main T-Shirt"
+             class="w-64 h-64 object-cover rounded-lg shadow-md transition-all duration-300">
+
+        <!-- Thumbnail Images -->
+        <div class="flex gap-3 mt-5">
+          <img src="t shirt/s5.jpeg" 
+               alt="Thumb 1"
+               class="thumb w-16 h-16 rounded-lg cursor-pointer border-2 border-transparent hover:border-orange-500 object-cover">
+          <img src="t shirt/s444.jpg" 
+               alt="Thumb 2"
+               class="thumb w-16 h-16 rounded-lg cursor-pointer border-2 border-transparent hover:border-orange-500 object-cover">
+          <img src="t shirt/s1_solid.webp" 
+               alt="Thumb 3"
+               class="thumb w-16 h-16 rounded-lg cursor-pointer border-2 border-transparent hover:border-orange-500 object-cover">
+          <img src="t shirt/s5555.jpg" 
+               alt="Thumb 4"
+               class="thumb w-16 h-16 rounded-lg cursor-pointer border-2 border-transparent hover:border-orange-500 object-cover">
+        </div>
+      </div>
+
+      <!-- Right: Product Info -->
+      <div>
+        <h2 class="text-3xl font-bold mb-3">Men’s Fashion / T-Shirt</h2>
+        <p class="text-blue-600 text-xl font-semibold mb-4">BDT= <span>699 TK</span></p>
+
+        <p class="text-gray-700 mb-5 leading-relaxed">
+          The Gildan Ultra Cotton T-shirt is made from 100% premium cotton, providing unmatched comfort and durability.
+          Available in multiple sizes and colors to fit your style perfectly.
+        </p>
+
+        <div class="mb-4">
+          <label class="block font-medium mb-1">Select Size</label>
+          <select class="border rounded-lg p-2 w-40">
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+            <option>XL</option>
+          </select>
+        </div>
+
+        <button class="bg-orange-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-orange-600 transition">
+       Buy Now
+        </button>
+      </div>
+    </div>
+  </section>
+<footer class="bg-black text-white py-10 px-5 sm:px-8 lg:px-16">
+  <!-- ✅ Responsive Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+    <!-- 🧢 Column 1 -->
+    <div class="pl-2 sm:pl-4">
+      <div class="flex items-center mb-3">
+        <img src="logo1.jpg" alt="Logo" class="h-[90px] sm:h-[100px] lg:h-[110px] w-auto mr-3 rounded-lg">
+        <span class="text-lg sm:text-xl lg:text-2xl font-bold leading-tight">Your Style Destination</span>
+      </div>
+      <p class="text-gray-300 leading-relaxed text-sm sm:text-base max-w-md">
+        FashionFetch is your trusted online marketplace where you can shop the latest fashion, 
+        accessories, and daily essentials from the comfort of your home. We provide quality 
+        products at the best price with fast delivery and secure payment options.
+      </p>
+    </div>
+
+    <!-- 👕 Column 2 -->
+    <div>
+      <h5 class="font-semibold text-lg mb-3 text-orange-400">Our Featured</h5>
+      <ul class="space-y-1 text-gray-300 text-sm sm:text-base">
+        <li class="hover:text-orange-400 cursor-pointer">Men Collection</li>
+        <li class="hover:text-orange-400 cursor-pointer">Women Collection</li>
+        <li class="hover:text-orange-400 cursor-pointer">Watch</li>
+        <li class="hover:text-orange-400 cursor-pointer">T-Shirt</li>
+        <li class="hover:text-orange-400 cursor-pointer">Shirt</li>
+        <li class="hover:text-orange-400 cursor-pointer">Shoes</li>
+      </ul>
+    </div>
+
+    <!-- 📞 Column 3 -->
+    <div>
+      <h5 class="font-semibold text-lg mb-3 text-orange-400">Support</h5>
+      <ul class="space-y-1 text-gray-300 text-sm sm:text-base">
+        <li>📍 Address: Jashore, New Market</li>
+        <li>📞 Mobile: 01787026652</li>
+        <li class="hover:text-orange-400 cursor-pointer">Privacy Policy</li>
+        <li class="hover:text-orange-400 cursor-pointer">Track Order</li>
+      </ul>
+
+      <div class="mt-4">
+        <h5 class="font-semibold text-lg mb-3 text-orange-400">Contact Us</h5>
+        <ul class="space-y-2 text-gray-300 text-sm sm:text-base">
+          <li class="flex items-center">
+            <i class="fa-brands fa-whatsapp text-green-500 text-xl mr-2"></i>
+            <a href="https://wa.me/8801787026652" target="_blank" class="text-cyan-400 hover:text-green-400">
+              Order Support
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔸 Footer Bottom -->
+  <div class="text-center text-gray-400 text-xs sm:text-sm mt-10 border-t border-gray-700 pt-4">
+    © 2025 FashionFetch — All rights reserved.
+  </div>
+</footer>
+
+
+
+
+<script>
+const mainImg = document.getElementById("main-img");
+const thumbs = document.querySelectorAll(".thumb");
+
+for (let thumb of thumbs) {
+  thumb.onclick = () => {
+    mainImg.src = thumb.src;
+    thumbs.forEach(t => t.classList.remove("border-orange-500"));
+    thumb.classList.add("border-orange-500");
+  };
+}
+</script>

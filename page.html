@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+<div class="w-full max-w-md p-8 md:p-10 bg-white rounded-2xl shadow-2xl">
+  <header class="mb-6 text-center">
+    <h1 class="text-2xl md:text-3xl font-bold">Create Account</h1>
+    <p class="text-sm text-gray-900 mt-1">Fill in the form to create your account</p>
+  </header>
+
+  <form id="registerForm" class="space-y-4" novalidate>
+    <div>
+      <label for="name" class="block text-sm font-medium text-black">Full Name</label>
+      <input id="name" type="text" placeholder="Your full name"
+             class="mt-1 block w-full rounded-lg border border-black px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+    </div>
+
+    <div>
+      <label for="email" class="block text-sm font-medium text-black">Email</label>
+      <input id="email" type="email" placeholder="you@example.com"
+             class="mt-1 block w-full rounded-lg border border-black px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+    </div>
+
+    <div>
+      <label for="password" class="block text-sm font-medium text-black">Password</label>
+      <input id="password" type="password" placeholder="Enter password"
+             class="mt-1 block w-full rounded-lg border border-black px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+    </div>
+
+    <button type="submit" 
+            class="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-indigo-600 text-white px-4 py-2 font-semibold hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+      Create Account
+    </button>
+
+    <p class="mt-4 text-center text-sm text-gray-500">
+      Already have an account? 
+      <a href="login.html" class="text-indigo-600 hover:underline">Login here</a>
+    </p>
+  </fo

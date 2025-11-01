@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionFetch – Your Style Destination</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--Navbar-->
+<body class="bg-gray-100 pt-16 ">
+
+<nav class="flex items-center justify-between bg-black p-4 fixed top-0 left-0 w-full z-50 ">
+  <!-- Brand --> 
+  <a href="#brand" class="flex items-center gap-2">
+    <img src="logo1.jpg" alt="Logo" class="h-[110px] w-auto">
+    <span class="text-green-400 text-xl font-bold">Your <span class="text-blue-600">Style </span> <span>Destination</span></span>
+  </a>
+  
+  <!-- Toggle Button -->
+<button class="text-white text-2xl md:hidden z-50 mr-4"
+        onclick="document.getElementById('menu').classList.toggle('hidden')">
+  &#9776;
+</button>
+
+
+  <!-- Menu -->
+  <div id="menu" class="hidden md:flex md:items-center gap-6 flex-col md:flex-row bg-black md:bg-transparent p-4 md:p-0 absolute md:static top-16 left-0 w-full md:w-auto ">
+    <a href="#home" class="text-white hover:text-green-400 active:text-orange-400 "><i class="fa-solid fa-house"></i> Home</a><br>
+    <a href="#footer" class="text-white hover:text-green-400"><i class="fa-solid fa-address-card"></i> About</a>
+    <li class="relative list-none">
+      <label class="flex items-center text-white hover:text-green-400 cursor-pointer" for="shop-toggle">
+        <i class="fa-solid fa-briefcase"></i> Shop
+        <i class="fa-solid fa-chevron-down ml-1"></i>
+      </label>
+      <input type="checkbox" id="shop-toggle" class="hidden peer">
+    
+      <ul class="absolute bg-gray-700 text-white mt-2 rounded shadow-lg hidden peer-checked:block">
+        <li><a href="#shoes" class="block px-4 py-2 hover:bg-green-500">Shoes</a></li>
+        <li><a href="#colleaction" class="block px-4 py-2 hover:bg-green-500">T-Shirts</a></li>
+        <li><a href="#watch" class="block px-4 py-2 hover:bg-green-500">Watch</a></li>
+      </ul>
+    </li>
+    
+    <a href="#footer" class="text-white hover:text-green-400"><i class="fa-solid fa-envelope"></i> Contact</a>
+
+    <!-- Search -->
+    <form class="flex">
+      <input type="text" placeholder="Search..." class="px-2 py-1 rounded-l bg-white text-black">
+      <button type="submit" class="bg-green-500 text-white px-3 rounded-r">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+    <div class="flex flex-col md:flex-row md:gap-2 mt-2 md:mt-0">
+      <a href="login.html" class="text-white border border-black  bg-indigo-600  px-3 py-1 rounded hover:bg-white hover:text-gray-800 text-center">
+        Login
+      </a>
+    </div>
+  </div>
+</nav>
+<section id="home" class="relative w-full h-[80vh] overflow-hidden">
+
+  <!-- 🎥 Background Video -->
+  <video autoplay muted loop playsinline
+    class="absolute top-0 left-0 w-full h-full object-cover z-0">
+    <source src="Video/bg vi.mp4" type="video/mp4" />
+  </video>
+
+  <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+  <div
+    class="absolute top-[20%] left-[5%] z-20 text-white sm:left-10 sm:top-[100px] leading-relaxed max-w-[90%] sm:max-w-md">
+
+    <h5 class="text-white font-bold text-sm sm:text-base">NEW ARRIVALS</h5>
+
+    <h1 class="text-xl sm:text-3xl font-bold mt-2">
+      <span>Best Price</span> This Year
+    </h1>
+
+    <p class="text-sm sm:text-lg mt-2">
+      Shoomatice offers you very comfortable time <br>
+      on walking and exercises...
+    </p>
+
+    <button type="submit"
+      class="text-white bg-orange-500 px-4 py-2 rounded hover:text-cyan-400 hover:bg-black shadow-md mt-4"
+      style="box-shadow: 2px 3px 3px 1px rgb(131, 133, 133);"
+      onclick="goToCollecation()">
+      Shop Now
+    </button>
+
+  </div>
+</section>
+
+
+<section id="brand" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 p-4">
+  <div class="container text-center mt-5 py-5 col-span-full">
+    <h2 class="text-2xl font-bold"style="margin-left: 35%;">Top Picks From Leading Brands</h2>
+    <hr class="mx-auto my-2 border-red-500"style="margin-left: 35%;">
+    <p class="text-gray-600"style="margin-left: 35%;">Your trusted destination for original and stylish branded products</p>
+  </div>
+  <img src="Watch/w1.png" class="w-full h-28 object-cover" alt="">
+  <img src="Watch/w22.png" class="w-full h-28 object-cover" alt="">
+  <img src="Watch/w333.png" class="w-full h-28 object-cover" alt="">
+  <img src="t shirt/t1.png" class="w-full h-28 object-cover" alt="">
+  <img src="t shirt/t2.png" class="w-full h-28 object-cover" alt="">
+  <img src="t shirt/t3.png" class="w-full h-28  object-cover" alt="">
+</section>
+<section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-6">
+
+  <!-- Card 1 -->
+<div class="group bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl"onclick="goToShoes()">
+  
+  <video autoplay muted loop playsinline
+    class="w-full h-56 object-cover">
+    <source src="Video/shoes.mp4" type="video/mp4">
+  </video>
+
+  <div class="p-5">
+    <h3 class="text-xl font-bold text-gray-800">Shoes Model</h3>
+
+    <p class="text-green-500 text-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+      Premium leather strap.
+    </p>
+
+    <button class="mt-4 bg-orange-500 text-white px-5 py-2 rounded hover:bg-black">See More</button>
+  </div>
+</div>
+
+
+  <!-- Card 2 -->
+<div class="group bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl"onclick="goToWatch()">
+  <video autoplay muted loop playsinline
+  class="h-56  w-full object-cover"
+   src="Video/watch.mp4" type="video/mp4"></video>
+  <div class="p-5">
+    <h3 class="text-xl font-bold text-gray-800">Watch Model</h3>
+
+    <p class="text-green-500 text-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+      Premium leather strap.
+    </p>
+
+    <button class="mt-4 bg-orange-500 text-white px-5 py-2 rounded hover:bg-black">See More</button>
+  </div>
+</div>
+
+
+  <!-- Card 3 -->
+<div class="group bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl" >
+  <video autoplay muted loop playsinline class="h-56 w-full object-cover"
+  src="Video/t shirt .mp4" type="video/mp4"></video>
+  <div class="p-5">
+    <h3 class="text-xl font-bold text-gray-800">T-Shirt Model </h3>
+
+    <p class="text-green-500 text-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+      Exclusive stylish T-Shirt..
+    </p>
+   <button class="mt-4 bg-orange-500 text-white px-5 py-2 rounded hover:bg-black" onclick="goToFeature()">See More</button>
+  
+  </div>
+</div>
+
+</section>
+<section id="colleaction" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-6">
+  <div class="container text-center mt-5 py-5 col-span-full">
+    <h2 class="text-2xl font-bold"style="margin-left: 35%;" >Our Featured</h2>
+    <hr class="mx-auto my-2 border-red-500"style="margin-left: 35%;">
+    <p class="text-gray-600"style="margin-left: 35%;">Here you can check out our new product with fair price on rymo.</p>
+  </div>
+
+  <!-- Product Card -->
+  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl text-center">
+
+  <img src="product/1.jpeg" alt="" class="w-40 h-40 object-cover rounded-lg mx-auto">
+
+ <div class="flex justify-center gap-1 mt-3 text-yellow-500">
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-regular fa-star-half-stroke"></i>
+   <i class="fa-regular fa-star"></i> 
+</div>
+
+
+  <h3 class="text-lg font-bold mt-2">Product Name</h3>
+
+  <!-- Price Section -->
+  <div class="mt-1">
+    <span id="discounted-price1" class="text-lg font-bold"></span>
+    <span id="original-price1" class="text-gray-500 line-through text-sm ml-2"></span>
+    <span id="discount-percent1" class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded ml-2"></span>
+  </div>
+
+  <button class="mt-3 text-white bg-orange-500 px-4 py-2 rounded hover:bg-black shadow-md ">
+    Shop Now
+  </button>
+
+</div>
+
+<!-- p-c 2-->
+ <div class="bg-white rounded-xl shadow-lg p-4 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+
+  <img src="product/2jpeg.jpeg" alt="" class="w-40 h-40 object-cover rounded-lg mx-auto">
+
+ <div class="flex justify-center gap-1 mt-3 text-yellow-500">
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-regular fa-star-half-stroke"></i>
+</div>
+
+  <h3 class="text-lg font-bold mt-2">Product Name</h3>
+
+  <div class="mt-1">
+    <span id="discounted-price2" class="text-lg font-bold"></span>
+    <span id="original-price2" class="text-gray-500 line-through text-sm ml-2"></span>
+    <span id="discount-percent2" class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded ml-2"></span>
+  </div>
+
+  <button class="mt-3 text-white bg-orange-500 px-4 py-2 rounded hover:bg-black shadow-md">
+    Shop Now
+  </button>
+
+</div>
+
+
+<!-- p-c 3-->
+  <div class="bg-white rounded-xl shadow-lg p-4 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+
+  <img src="product/3jpeg.jpeg" alt="" class="w-40 h-40 object-cover rounded-lg mx-auto">
+
+ <div class="flex justify-center gap-1 mt-3 text-yellow-500">
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-regular fa-star"></i> 
+</div>
+
+
+  <h3 class="text-lg font-bold mt-2">Product Name</h3>
+
+  <div class="mt-1">
+    <span id="discounted-price3" class="text-lg font-bold"></span>
+    <span id="original-price3" class="text-gray-500 line-through text-sm ml-2"></span>
+    <span id="discount-percent3" class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded ml-2"></span>
+  </div>
+
+  <button class="mt-3 text-white bg-orange-500 px-4 py-2 rounded hover:bg-black shadow-md">
+    Shop Now
+  </button>
+
+</div>
+<!-- p-c 4-->
+ <div class="bg-white rounded-xl shadow-lg p-4 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+
+  <img src="product/4.jpeg" alt="" class="w-40 h-40 object-cover rounded-lg mx-auto">
+
+<div class="flex justify-center gap-1 mt-3 text-yellow-500">
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-regular fa-star"></i> 
+</div>
+
+
+  <h3 class="text-lg font-bold mt-2">Product Name</h3>
+
+  <div class="mt-1">
+    <span id="discounted-price4" class="text-lg font-bold"></span>
+    <span id="original-price4" class="text-gray-500 line-through text-sm ml-2"></span>
+    <span id="discount-percent4" class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded ml-2"></span>
+  </div>
+
+  <button class="mt-3 text-white bg-orange-500 px-4 py-2 rounded hover:bg-black shadow-md">
+    Shop Now
+  </button>
+
+</div>
+<!--p-c 5 -->
+<div class="bg-white rounded-xl shadow-lg p-4 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+
+  <img src="product/5.jpeg" alt="" class="w-40 h-40 object-cover rounded-lg mx-auto">
+
+ <div class="flex justify-center gap-1 mt-3 text-yellow-500">
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-regular fa-star-half-stroke"></i>
+</div>
+
+
+  <h3 class="text-lg font-bold mt-2">Product Name</h3>
+
+  <div class="mt-1">
+    <span id="discounted-price5" class="text-lg font-bold"></span>
+    <span id="original-price5" class="text-gray-500 line-through text-sm ml-2"></span>
+    <span id="discount-percent5" class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded ml-2"></span>
+  </div>
+
+  <button class="mt-3 text-white bg-orange-500 px-4 py-2 rounded hover:bg-black shadow-md">
+    Shop Now
+  </button>
+
+</div>
+
+<!-- p-c 6-->
+ <div class="bg-white rounded-xl shadow-lg p-4 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+
+  <img src="product/6.jpeg" alt="" class="w-40 h-40 object-cover rounded-lg mx-auto">
+
+<div class="flex justify-center gap-1 mt-3 text-yellow-500">
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-regular fa-star"></i> 
+</div>
+
+  <h3 class="text-lg font-bold mt-2">Product Name</h3>
+
+  <div class="mt-1">
+    <span id="discounted-price6" class="text-lg font-bold"></span>
+    <span id="original-price6" class="text-gray-500 line-through text-sm ml-2"></span>
+    <span id="discount-percent6" class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded ml-2"></span>
+  </div>
+
+  <button class="mt-3 text-white bg-orange-500 px-4 py-2 rounded hover:bg-black shadow-md">
+    Shop Now
+  </button>
+
+</div>
+
+<!-- p-c 7-->
+ <div class="bg-white rounded-xl shadow-lg p-4 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+
+  <img src="product/7.jpeg" alt="" class="w-40 h-40 object-cover rounded-lg mx-auto">
+
+  <div class="flex justify-center gap-1 mt-3 text-yellow-500">
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-regular fa-star-half-stroke"></i>
+</div>
+
+
+  <h3 class="text-lg font-bold mt-2">Product Name</h3>
+
+  <div class="mt-1">
+    <span id="discounted-price7" class="text-lg font-bold"></span>
+    <span id="original-price7" class="text-gray-500 line-through text-sm ml-2"></span>
+    <span id="discount-percent7" class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded ml-2"></span>
+  </div>
+
+  <button class="mt-3 text-white bg-orange-500 px-4 py-2 rounded hover:bg-black shadow-md">
+    Shop Now
+  </button>
+
+</div>
+
+<!-- p-c 8-->
+<div class="bg-white rounded-xl shadow-lg p-4 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+
+  <img src="product/8.jpeg" alt="" class="w-40 h-40 object-cover rounded-lg mx-auto">
+
+  <div class="flex justify-center gap-1 mt-3 text-yellow-500">
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-regular fa-star"></i> 
+</div>
+
+
+  <h3 class="text-lg font-bold mt-2">Product Name</h3>
+
+  <div class="mt-1">
+    <span id="discounted-price8" class="text-lg font-bold"></span>
+    <span id="original-price8" class="text-gray-500 line-through text-sm ml-2"></span>
+    <span id="discount-percent8" class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded ml-2"></span>
+  </div>
+
+  <button class="mt-3 text-white bg-orange-500 px-4 py-2 rounded hover:bg-black shadow-md" >
+    Shop Now
+  </button>
+</div>
+  <!-- Premium Collection -->
+  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl text-center">
+
+  <img src="panjabi/1.jpeg" alt="" class="w-40 h-40 object-cover rounded-lg mx-auto">
+
+  <div class="flex justify-center gap-1 mt-3 text-yellow-500">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+  </div>
+
+  <h3 class="text-lg font-bold mt-2 ">Product Name</h3>
+
+  <div class="mt-1">
+    <span id="discounted-price9" class="text-lg font-bold"></span>
+    <span id="original-price9" class="text-gray-500 line-through text-sm ml-2"></span>
+    <span id="discount-percent9" class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded ml-2"></span>
+  </div>
+
+  <button class="mt-3 text-white bg-orange-500 px-4 py-2 rounded hover:bg-black shadow-md">
+    Shop Now
+  </button>
+
+</div>
+<!-- p-c-->
+ <div class="bg-white rounded-xl shadow-lg p-4 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+
+  <img src="panjabi/images (1).jpeg" alt="" class="w-40 h-40 object-cover rounded-lg mx-auto">
+
+  <div class="flex justify-center gap-1 mt-3 text-yellow-500">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+  </div>
+
+  <h3 class="text-lg font-bold mt-2">Product Name</h3>
+
+  <div class="mt-1">
+    <span id="discounted-price10" class="text-lg font-bold"></span>
+    <span id="original-price10" class="text-gray-500 line-through text-sm ml-2"></span>
+    <span id="discount-percent10" class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded ml-2"></span>
+  </div>
+
+  <button class="mt-3 text-white bg-orange-500 px-4 py-2 rounded hover:bg-black shadow-md">
+    Shop Now
+  </button>
+</div>
+
+
+<!-- p-c-->
+ 
+ <div class="bg-white rounded-xl shadow-lg p-4 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+
+  <img src="panjabi/images (2).jpeg" alt="" class="w-40 h-40 object-cover rounded-lg mx-auto">
+
+  <div class="flex justify-center gap-1 mt-3 text-yellow-500">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+  </div>
+
+  <h3 class="text-lg font-bold mt-2">Product Name</h3>
+
+  <div class="mt-1">
+    <span id="discounted-price11" class="text-lg font-bold"></span>
+    <span id="original-price11" class="text-gray-500 line-through text-sm ml-2"></span>
+    <span id="discount-percent11" class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded ml-2"></span>
+  </div>
+
+  <button class="mt-3 text-white bg-orange-500 px-4 py-2 rounded hover:bg-black shadow-md">
+    Shop Now
+  </button>
+
+</div>
+<!-- p-c-->
+ <div class="bg-white rounded-xl shadow-lg p-4 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+
+  <img src="panjabi/images.jpeg" alt="" class="w-40 h-40 object-cover rounded-lg mx-auto">
+
+  <div class="flex justify-center gap-1 mt-3 text-yellow-500">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+  </div>
+
+  <h3 class="text-lg font-bold mt-2">Product Name</h3>
+
+  <div class="mt-1">
+    <span id="discounted-price12" class="text-lg font-bold"></span>
+    <span id="original-price12" class="text-gray-500 line-through text-sm ml-2"></span>
+    <span id="discount-percent12" class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded ml-2"></span>
+  </div>
+
+  <button class="mt-3 text-white bg-orange-500 px-4 py-2 rounded hover:bg-black shadow-md">
+    Shop Now
+  </button>
+
+</div>
+</section>
+<!--Gap-->
+<section class="h-[80vh] bg-fixed bg-center bg-cover flex flex-col justify-center items-start text-black px-10" 
+  style="background-image: url(bguppppavif.avif);">
+<h4 class="font-semibold">MID SEASONS SALE</h4> <h1 class="font-bold Arial text-2xl">Autumn Collection <br>UP TO 20% OFF</h1> <button class="uppercase mt-3 text-white bg-orange-500 px-4 py-2 rounded hover:bg-black shadow-md">Shop Now</button>
+</section>
+
+<section id="feature" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-6">
+  <div class="container text-center mt-5 py-5 col-span-full">
+    <h2 class="text-2xl font-bold" style="margin-left: 35%;">T-Shirts <span class="text-orange-400"> Collection</span></h2>
+    <hr class="mx-auto my-2 border-red-500" style="margin-left: 35%;">
+    <p class="text-green-800 text-center"style="margin-left: 35%;">Discover handpicked fashion essentials crafted for style and comfort. </p>
+  </div>
+<!--T Shirt-->
+  <!--  Collection1 -->
+  <div class="product-card">
+    <img src="t shirt/s1.jpeg" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price111"></span>
+      <span class="original" id="original-price111"></span>
+      <span class="discount" id="discount-percent111"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+ <!--  Collection 2 -->
+  <div class="product-card">
+    <img src="t shirt/s2.jpeg" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price222"></span>
+      <span class="original" id="original-price222"></span>
+      <span class="discount" id="discount-percent222"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+
+
+<!--  Collection 3 -->
+   <div class="product-card">
+    <img src="t shirt/images.jpeg" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price333"></span>
+      <span class="original" id="original-price333"></span>
+      <span class="discount" id="discount-percent333"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+<!--  Collection 4 -->
+  <div class="product-card">
+    <img src="t shirt/s4 (1).jpeg" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price444"></span>
+      <span class="original" id="original-price444"></span>
+      <span class="discount" id="discount-percent444"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+  <!--  Collection 5 -->
+   <div class="product-card">
+    
+    <img src="t shirt/s5.jpeg" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price555"></span>
+      <span class="original" id="original-price555"></span>
+      <span class="discount" id="discount-percent555"></span>
+    </div>
+
+    <button> <a href="new.html">Shop Now</a></button>
+  </div>
+  <!--  Collection 6 -->
+   <div class="product-card">
+    <img src="t shirt/s6.jpeg" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price666"></span>
+      <span class="original" id="original-price666"></span>
+      <span class="discount" id="discount-percent666"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+  <!--  Collection 7 -->
+   <div class="product-card">
+    <img src="t shirt/s7.jpeg" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price777"></span>
+      <span class="original" id="original-price777"></span>
+      <span class="discount" id="discount-percent777"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+  <!--  Collection 8 -->
+   <div class="product-card">
+    <img src="t shirt/s8.jpeg" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price888"></span>
+      <span class="original" id="original-price888"></span>
+      <span class="discount" id="discount-percent888"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+
+</div>
+</section> 
+
+<!--Shoes Collection-->
+<section id="shoes" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-6">
+  <div class="container text-center mt-5 py-5 col-span-full">
+    <h2 class="text-2xl font-bold " style="margin-left: 35%;">Exclusive <span class="text-green-800">Shoes</span>   <span class="text-red-800"> Collection</span></h2>
+    <hr class="mx-auto my-2 border-red-500" style="margin-left: 35%;">
+    <p class="text-green-800" style="margin-left: 35%;">Designed for Modern Walkers. Built for Style, Comfort & Confidence </p>
+  </div>
+
+  <!--  Collection 1 -->
+  <div class="product-card">
+    <img src="Shoes/bg 9.avif" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+       <i class="fa-regular fa-star"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price112"></span>
+      <span class="original" id="original-price112"></span>
+      <span class="discount" id="discount-percent112"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+ <!--  Collection 2 -->
+  <div class="product-card">
+    <img src="Shoes/2.avif" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price22"></span>
+      <span class="original" id="original-price22"></span>
+      <span class="discount" id="discount-percent22"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+
+
+<!--  Collection 3 -->
+   <div class="product-card">
+    <img src="Shoes/3.avif" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price33"></span>
+      <span class="original" id="original-price33"></span>
+      <span class="discount" id="discount-percent33"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+<!--  Collection 4 -->
+  <div class="product-card">
+    <img src="Shoes/4.avif" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price44"></span>
+      <span class="original" id="original-price44"></span>
+      <span class="discount" id="discount-percent44"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+  <!--  Collection 5 -->
+   <div class="product-card">
+    <img src="Shoes/5.avif" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price55"></span>
+      <span class="original" id="original-price55"></span>
+      <span class="discount" id="discount-percent55"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+  <!--  Collection 6 -->
+   <div class="product-card">
+    <img src="Shoes/6.avif" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price66"></span>
+      <span class="original" id="original-price66"></span>
+      <span class="discount" id="discount-percent66"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+  <!--  Collection 7 -->
+   <div class="product-card">
+    <img src="Shoes/7.avif" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price77"></span>
+      <span class="original" id="original-price77"></span>
+      <span class="discount" id="discount-percent77"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+  <!--  Collection 8 -->
+   <div class="product-card">
+    <img src="Shoes/8.avif" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price88"></span>
+      <span class="original" id="original-price88"></span>
+      <span class="discount" id="discount-percent88"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+
+</div>
+</section> 
+<!--Watch Collection-->
+<section id="watch" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-6">
+  <div class="w-full text-center mt-5 py-5 col-span-full">
+    <h2 class="text-2xl font-bold">
+      Exclusive <span class="text-red-800">Watch</span> 
+      <span class="text-cyan-400">Collection</span>
+    </h2>
+    <hr class="w-100 mx-auto my-2 border-red-500">
+    <p class="text-green-800">
+      Designed for Modern Walkers. Built for Style, Comfort & Confidence
+    </p>
+  </div>
+
+  <!--  Collection 1 -->
+  <div class="product-card">
+    <img src="Watch/wa1.avif" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+       <i class="fa-regular fa-star"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price71"></span>
+      <span class="original" id="original-price71"></span>
+      <span class="discount" id="discount-percent71"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+ <!--  Collection 2 -->
+  <div class="product-card">
+    <img src="Watch/wa2.avif" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price72"></span>
+      <span class="original" id="original-price72"></span>
+      <span class="discount" id="discount-percent72"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+
+
+<!--  Collection 3 -->
+   <div class="product-card">
+    <img src="Watch/wa3.avif" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price73"></span>
+      <span class="original" id="original-price73"></span>
+      <span class="discount" id="discount-percent73"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+<!--  Collection 4 -->
+  <div class="product-card">
+    <img src="Watch/wa4.avif" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price74"></span>
+      <span class="original" id="original-price74"></span>
+      <span class="discount" id="discount-percent74"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+  <!--  Collection 5 -->
+   <div class="product-card">
+    <img src="Watch/wa5.avif" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price75"></span>
+      <span class="original" id="original-price75"></span>
+      <span class="discount" id="discount-percent75"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+  <!--  Collection 6 -->
+   <div class="product-card">
+    <img src="Watch/wa6.avif" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price76"></span>
+      <span class="original" id="original-price76"></span>
+      <span class="discount" id="discount-percent76"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+  <!--  Collection 7 -->
+   <div class="product-card">
+    <img src="Watch/wa7.avif" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price787"></span>
+      <span class="original" id="original-price787"></span>
+      <span class="discount" id="discount-percent787"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+  <!--  Collection 8 -->
+   <div class="product-card">
+    <img src="Watch/wa8.avif" alt="">
+
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star-half-stroke"></i>
+    </div>
+
+    <h3 class="title">Product Name</h3>
+
+    <div class="price">
+      <span class="discounted" id="discounted-price78"></span>
+      <span class="original" id="original-price78"></span>
+      <span class="discount" id="discount-percent78"></span>
+    </div>
+
+    <button>Shop Now</button>
+  </div>
+
+</div>
+</section> 
+
+<footer class="bg-black text-white py-8" id="footer">
+  <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
+
+    <!-- Column 1: Logo + Bio -->
+    <div>
+      <div class="flex items-center mb-3">
+        <img src="logo1.jpg" alt="Logo" class="h-[110px] w-auto mr-3">
+        <span class="text-2xl font-bold">Your Style Destination</span>
+      </div>
+      <p class="text-gray-300 leading-relaxed text-sm">
+        FashionFetch is your trusted online marketplace where you can shop the latest fashion, 
+        accessories, and daily essentials from the comfort of your home. We provide quality 
+        products at the best price with fast delivery and secure payment options.
+      </p>
+    </div>
+
+    <!-- Column 2: Our Featured -->
+    <div>
+      <h5 class="font-semibold text-lg mb-3">Our Featured</h5>
+      <ul class="space-y-1 text-gray-300 text-sm">
+        <li>Men Collection</li>
+        <li>Women Collection</li>
+        <li>Watch</li>
+        <li>T-Shirt</li>
+        <li>Shirt</li>
+        <li>Shoes</li>
+      </ul>
+    </div>
+
+    <!-- Column 3: (Support) -->
+    <div>
+      <h5 class="font-semibold text-lg mb-3">Support</h5>
+      <ul class="space-y-1 text-gray-300 text-sm">
+        <li>Address : Jashore, New Market</li>
+        <li>Mobile Number : 01787026652</li>
+        <li>Privacy Policy</li>
+        <li>Track Order</li>
+        <div>
+  <h5 class="font-semibold text-lg mb-3">Contact Us</h5>
+  <ul class="space-y-2 text-gray-300 text-sm">
+
+    <li class="flex items-center">
+      <i class="fa-brands fa-whatsapp text-green-500 text-xl mr-2"></i>
+      <a href="https://wa.me/8801787026652" target="_blank" class="text-cyan-400 hover:text-green-400">Order Support
+      </a>
+    </li>
+
+  </ul>
+</div>
+        
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  function goToFeature() {
+    document.getElementById("feature").scrollIntoView({ 
+      behavior: "smooth" 
+    });
+  }
+
+  function goToCollecation(){
+    document.getElementById("colleaction").scrollIntoView({
+      behavior:"smooth"
+
+    });
+  }
+  function goToShoes(){
+    document.getElementById("shoes").scrollIntoView({
+      behavior:"smooth"
+    })
+  }
+    function goToWatch(){
+    document.getElementById("watch").scrollIntoView({
+      behavior:"smooth"
+    })
+  }
+  function setPrice(id, original, discount) {
+    let newPrice = original - (original * discount / 100);
+    document.getElementById("discounted-price" + id).innerText = "৳ " + newPrice;
+    document.getElementById("original-price" + id).innerText = "৳ " + original;
+    document.getElementById("discount-percent" + id).innerText = "-" + discount + "%";
+  }
+
+  setPrice(1, 1500, 63);  // Product 1
+  setPrice(2, 2000, 50);  // Product 2
+  setPrice(3, 1020, 40);   // Product 3
+  setPrice(4, 1800, 32);   // Product 4
+  setPrice(5, 2000, 45);   // Product 5
+  setPrice(6, 1550, 30);   // Product 6
+  setPrice(7, 700, 20);   // Product 7
+  setPrice(8, 1200, 60);   // Product 8
+  setPrice(9, 12000, 37);   // Product 9
+  setPrice(10, 9780, 35);   // Product 10
+  setPrice(11, 7000, 30);   // Product 11
+  setPrice(12, 6400, 18);   // Product 12
+  
+  setPrice(111, 900, 20);  // Product 111
+  setPrice(222, 700, 10);  // Product 222
+  setPrice(333, 1020, 40);   // Product 333
+  setPrice(444, 920, 35);   // Product 444
+  setPrice(555, 650, 16);   // Product 555
+  setPrice(666, 1550, 30);   // Product 666
+  setPrice(777, 1050, 20);   // Product 777
+  setPrice(888, 780, 30);   // Product 888
+
+  setPrice(112, 1900, 20);  // Product 112
+  setPrice(22, 1300, 10);  // Product 22
+  setPrice(33, 2095, 40);   // Product 33
+  setPrice(44, 2000, 35);   // Product 44
+  setPrice(55, 2300, 16);   // Product 55
+  setPrice(66, 1850, 30);   // Product 66
+  setPrice(77, 2050, 20);   // Product 77
+  setPrice(88, 1900, 30);   // Product 88
+
+  setPrice(71, 1900, 20);  // Product 01
+  setPrice(72, 1300, 10);   // Product 02
+  setPrice(73, 2095, 40);   // Product 03
+  setPrice(74, 2000, 35);   // Product 04
+  setPrice(75, 2000, 16);   // Product 05
+  setPrice(76, 1850, 30);   // Product 06
+  setPrice(787, 2050, 20);   // Product 07
+  setPrice(78, 1900, 30);   // Product 08
+</script>
+</body>
+</html>
