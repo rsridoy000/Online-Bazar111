@@ -60,7 +60,7 @@
     </div>
   </div>
 </nav>
-<section id="home" class="relative w-full h-[80vh] overflow-hidden">
+<section id="home" class="relative w-full h-[80vh] sm:h-screen overflow-hidden">
 
   <!-- 🎥 Background Video -->
   <video autoplay muted loop playsinline
@@ -68,9 +68,12 @@
     <source src="Video/bg vi.mp4" type="video/mp4" />
   </video>
 
+  <!-- Overlay -->
   <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+
+  <!-- Content -->
   <div
-    class="absolute top-[20%] left-[5%] z-20 text-white sm:left-10 sm:top-[100px] leading-relaxed max-w-[90%] sm:max-w-md">
+    class="absolute top-1/4 left-4 sm:left-10 sm:top-1/4 z-20 text-white leading-relaxed max-w-[90%] sm:max-w-md">
 
     <h5 class="text-white font-bold text-sm sm:text-base">NEW ARRIVALS</h5>
 
@@ -94,12 +97,16 @@
 </section>
 
 
+
 <section id="brand" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 p-4">
-  <div class="container text-center mt-5 py-5 col-span-full">
-    <h2 class="text-2xl font-bold"style="margin-left: 35%;">Top Picks From Leading Brands</h2>
-    <hr class="mx-auto my-2 border-red-500"style="margin-left: 35%;">
-    <p class="text-gray-600"style="margin-left: 35%;">Your trusted destination for original and stylish branded products</p>
-  </div>
+<div class="container text-center mt-5 py-5 col-span-full px-4 md:px-0">
+  <h2 class="text-xl md:text-2xl font-bold">Top Picks From Leading Brands</h2>
+  <hr class="mx-auto my-2 w-100 border-red-500">
+  <p class="text-gray-600 text-sm md:text-base">
+    Your trusted destination for original and stylish branded products
+  </p>
+</div>
+
   <img src="Watch/w1.png" class="w-full h-28 object-cover" alt="">
   <img src="Watch/w22.png" class="w-full h-28 object-cover" alt="">
   <img src="Watch/w333.png" class="w-full h-28 object-cover" alt="">
@@ -163,11 +170,13 @@
 
 </section>
 <section id="colleaction" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-6">
-  <div class="container text-center mt-5 py-5 col-span-full">
-    <h2 class="text-2xl font-bold"style="margin-left: 35%;" >Our Featured</h2>
-    <hr class="mx-auto my-2 border-red-500"style="margin-left: 35%;">
-    <p class="text-gray-600"style="margin-left: 35%;">Here you can check out our new product with fair price on rymo.</p>
-  </div>
+<div class="container text-center mt-5 py-5 col-span-full px-4 md:px-0">
+  <h2 class="text-xl md:text-2xl font-bold">Our Featured</h2>
+  <hr class="mx-auto my-2 w-100 border-red-500">
+  <p class="text-gray-600 text-sm md:text-base">
+    Here you can check out our new product with fair price on Rymo.
+  </p>
+</div>
 
   <!-- Product Card -->
   <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl text-center">
@@ -503,11 +512,16 @@
 </section>
 
 <section id="feature" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-6">
-  <div class="container text-center mt-5 py-5 col-span-full">
-    <h2 class="text-2xl font-bold" style="margin-left: 35%;">T-Shirts <span class="text-orange-400"> Collection</span></h2>
-    <hr class="mx-auto my-2 border-red-500" style="margin-left: 35%;">
-    <p class="text-green-800 text-center"style="margin-left: 35%;">Discover handpicked fashion essentials crafted for style and comfort. </p>
-  </div>
+  <div class="container text-center mt-5 py-5 col-span-full px-4 md:px-0">
+  <h2 class="text-xl md:text-2xl font-bold">
+    T-Shirts <span class="text-orange-400">Collection</span>
+  </h2>
+  <hr class="mx-auto my-2 w-100 border-red-500">
+  <p class="text-green-800 text-sm md:text-base">
+    Discover handpicked fashion essentials crafted for style and comfort.
+  </p>
+</div>
+
 <!--T Shirt-->
   <!--  Collection1 -->
   <div class="product-card">
@@ -694,11 +708,16 @@
 
 <!--Shoes Collection-->
 <section id="shoes" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-6">
-  <div class="container text-center mt-5 py-5 col-span-full">
-    <h2 class="text-2xl font-bold " style="margin-left: 35%;">Exclusive <span class="text-green-800">Shoes</span>   <span class="text-red-800"> Collection</span></h2>
-    <hr class="mx-auto my-2 border-red-500" style="margin-left: 35%;">
-    <p class="text-green-800" style="margin-left: 35%;">Designed for Modern Walkers. Built for Style, Comfort & Confidence </p>
-  </div>
+ <div class="container text-center mt-5 py-5 col-span-full px-4 md:px-0">
+  <h2 class="text-xl md:text-2xl font-bold">
+    Exclusive <span class="text-green-800">Shoes</span> <span class="text-red-800">Collection</span>
+  </h2>
+  <hr class="mx-auto my-2 w-100 border-red-500">
+  <p class="text-green-800 text-sm md:text-base">
+    Designed for Modern Walkers. Built for Style, Comfort & Confidence.
+  </p>
+</div>
+
 
   <!--  Collection 1 -->
   <div class="product-card">
@@ -1075,12 +1094,11 @@
 
 </div>
 </section> 
-
 <footer class="bg-black text-white py-8" id="footer">
   <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
 
     <!-- Column 1: Logo + Bio -->
-    <div>
+    <div class="flex flex-col">
       <div class="flex items-center mb-3">
         <img src="logo1.jpg" alt="Logo" class="h-[110px] w-auto mr-3">
         <span class="text-2xl font-bold">Your Style Destination</span>
@@ -1095,7 +1113,7 @@
     <!-- Column 2: Our Featured -->
     <div>
       <h5 class="font-semibold text-lg mb-3">Our Featured</h5>
-      <ul class="space-y-1 text-gray-300 text-sm">
+      <ul class="space-y-2 text-gray-300 text-sm">
         <li>Men Collection</li>
         <li>Women Collection</li>
         <li>Watch</li>
@@ -1105,27 +1123,24 @@
       </ul>
     </div>
 
-    <!-- Column 3: (Support) -->
+    <!-- Column 3: Support + Contact -->
     <div>
       <h5 class="font-semibold text-lg mb-3">Support</h5>
-      <ul class="space-y-1 text-gray-300 text-sm">
-        <li>Address : Jashore, New Market</li>
-        <li>Mobile Number : 01787026652</li>
+      <ul class="space-y-2 text-gray-300 text-sm">
+        <li>Address: Jashore, New Market</li>
+        <li>Mobile Number: 01787026652</li>
         <li>Privacy Policy</li>
         <li>Track Order</li>
-        <div>
-  <h5 class="font-semibold text-lg mb-3">Contact Us</h5>
-  <ul class="space-y-2 text-gray-300 text-sm">
+      </ul>
 
-    <li class="flex items-center">
-      <i class="fa-brands fa-whatsapp text-green-500 text-xl mr-2"></i>
-      <a href="https://wa.me/8801787026652" target="_blank" class="text-cyan-400 hover:text-green-400">Order Support
-      </a>
-    </li>
-
-  </ul>
-</div>
-        
+      <h5 class="font-semibold text-lg mt-5 mb-3">Contact Us</h5>
+      <ul class="space-y-2 text-gray-300 text-sm">
+        <li class="flex items-center">
+          <i class="fa-brands fa-whatsapp text-green-500 text-xl mr-2"></i>
+          <a href="https://wa.me/8801787026652" target="_blank" class="text-cyan-400 hover:text-green-400">
+            Order Support
+          </a>
+        </li>
       </ul>
     </div>
 
